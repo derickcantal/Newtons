@@ -5,14 +5,18 @@ namespace App\Http\Controllers\Manage;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ManageUserController extends Controller
+class ManageTuitionController extends Controller
 {
+    public function search()
+    {
+        //
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view ('manage.users.index');
+        //
     }
 
     /**
