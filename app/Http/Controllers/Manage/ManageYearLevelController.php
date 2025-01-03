@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use \Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use App\Models\yearlevel;
+
 
 class ManageYearLevelController extends Controller
 {
@@ -16,7 +21,13 @@ class ManageYearLevelController extends Controller
      */
     public function index()
     {
-        //
+        $timenow = Carbon::now()->timezone('Asia/Manila')->format('Y-m-d H:i:s');
+
+        $user = yearlevel::orderBy('status','asc')
+                    ->paginate(5);
+
+        return view('manage.yearlevel.index',compact('user'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**

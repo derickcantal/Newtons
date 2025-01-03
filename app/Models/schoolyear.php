@@ -8,6 +8,7 @@ class schoolyear extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'syid';
+    protected $table = 'schoolyear';
 
     protected $dates = [
         'timerecorded',

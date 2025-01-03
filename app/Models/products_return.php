@@ -8,6 +8,7 @@ class products_return extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'prid';
+    protected $table = 'products_return';
 
     protected $dates = [
         'timerecorded',

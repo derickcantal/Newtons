@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use \Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use App\Models\products;
+
 
 class ManageProductsController extends Controller
 {
@@ -16,7 +21,13 @@ class ManageProductsController extends Controller
      */
     public function index()
     {
-        //
+        $timenow = Carbon::now()->timezone('Asia/Manila')->format('Y-m-d H:i:s');
+
+        $user = products::orderBy('status','asc')
+                    ->paginate(5);
+
+        return view('manage.products.index',compact('user'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**

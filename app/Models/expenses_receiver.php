@@ -8,6 +8,7 @@ class expenses_receiver extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'erid';
+    protected $table = 'expenses_receiver';
 
     protected $dates = [
         'timerecorded',

@@ -8,6 +8,7 @@ class products_transfer extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'ptid';
+    protected $table = 'products_transfer';
 
     protected $dates = [
         'timerecorded',

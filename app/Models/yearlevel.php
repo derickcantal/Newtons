@@ -8,6 +8,7 @@ class yearlevel extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'yearlevelid';
+    protected $table = 'yearlevel';
 
     protected $dates = [
         'timerecorded',

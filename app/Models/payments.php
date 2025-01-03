@@ -8,6 +8,7 @@ class payments extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'payid';
+    protected $table = 'payments';
 
     protected $dates = [
         'timerecorded',

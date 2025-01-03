@@ -8,6 +8,7 @@ class products_deliver extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'pdid';
+    protected $table = 'products_deliver';
 
     protected $dates = [
         'timerecorded',

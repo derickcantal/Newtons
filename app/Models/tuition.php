@@ -8,6 +8,7 @@ class tuition extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'tuitionid';
+    protected $table = 'tuition';
 
     protected $dates = [
         'timerecorded',

@@ -14,6 +14,7 @@ class User extends Authenticatable
 
     protected $connection = 'mysql';
     protected $primaryKey = 'userid';
+    protected $table = 'users';
 
     protected $dates = [
         'timerecorded',

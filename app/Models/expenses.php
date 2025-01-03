@@ -8,6 +8,7 @@ class expenses extends Model
 {
     protected $connection = 'mysql';
     protected $primaryKey = 'eid';
+    protected $table = 'expenses';
 
     protected $dates = [
         'timerecorded',
