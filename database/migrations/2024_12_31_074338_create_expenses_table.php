@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('expenses', function (Blueprint $table) {
-            $table->integer('eid')->primary();
+            $table->increments('eid')->primary();
+            $table->string('avatar');
             $table->integer('ecid');
             $table->string('ename');
             $table->dateTime('expdatetime');

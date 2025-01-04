@@ -40,6 +40,7 @@ class RegisteredUserController extends Controller
 
         $user = User::create([
             'username' => $request->username,
+            'avatar' => 'avatars/avatar-default.jpg',
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'firstname' => $request->firstname,
@@ -48,10 +49,11 @@ class RegisteredUserController extends Controller
             'birthday' => $request->birthdate,
             'house' => $request->house,
             'street' => $request->street,
+            'brgy' => $request->brgy,
             'city' => $request->city,
             'province' => $request->province,
             'contact' => $request->contact,
-            'privilege' => $request->accesstype,
+            'accesstype' => $request->accesstype,
             'status' => 'Active',
             'notes' => '.',
             'created_by' => $request->email,

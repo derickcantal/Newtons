@@ -81,9 +81,6 @@
                                             Profile
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            Branch
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
                                             Access Type
                                         </th>
                                         <th scope="col" class="px-6 py-3">
@@ -110,9 +107,6 @@
                                                 <x-input-label>{{ $users->lastname }}, {{ $users->firstname }} {{ $users->middlename }}</x-input-label>
                                                 <x-input-label for="email" :value="$users->email"/>
                                         </th>
-                                        <td class="px-6 py-4">
-                                            <x-input-label for="branchname" :value="$users->branchname"/>
-                                        </td>
                                         <td class="px-6 py-4">
                                             <x-input-label for="accesstype" :value="$users->accesstype"/>
                                         </td>

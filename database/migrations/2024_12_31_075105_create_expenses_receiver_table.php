@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('expenses_receiver', function (Blueprint $table) {
-            $table->integer('erid')->primary();
+            $table->increments('erid')->primary();
             $table->string('ername');
             $table->string('address');
             $table->string('contact');

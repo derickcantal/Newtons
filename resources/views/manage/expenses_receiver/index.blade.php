@@ -26,7 +26,7 @@
                         <div class="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
                             <div class="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
                                 <x-primary-button class="ms-4">
-                                    <a class="btn btn-primary" href="{{ route('manageer.create') }}"> Create New user</a>
+                                    <a class="btn btn-primary" href="{{ route('manageer.create') }}"> Create New Receiver</a>
                                 </x-primary-button>
                                 
                                 <form class="flex items-center" action="{{ route('manageer.search') }}" method="get">

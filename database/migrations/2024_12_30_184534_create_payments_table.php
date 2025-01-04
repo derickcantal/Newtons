@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->integer('payid')->primary();
+            $table->increments('payid')->primary();
+            $table->string('avatar');
             $table->string('orno');
             $table->string('payfor');
             $table->decimal('amount', $precision = 8, $scale = 2);

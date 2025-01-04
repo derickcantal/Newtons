@@ -16,6 +16,7 @@ class expenses extends Model
 
     protected $fillable = [
         'ecid',
+        'avatar',
         'ename',
         'expdatetime',
         'rid',

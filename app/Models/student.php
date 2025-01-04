@@ -16,14 +16,16 @@ class student extends Model
 
     protected $fillable = [
         'username',
+        'avatar',
         'email',
         'password',
         'firstname',
         'middlename',
         'lastname',
-        'birthday',
+        'birthdate',
         'house',
         'street',
+        'brgy',
         'city',
         'province',
         'fathersname',
