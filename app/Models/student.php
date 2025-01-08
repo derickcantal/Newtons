@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class student extends Model
 {
     protected $connection = 'mysql';
-    protected $primaryKey = 'studentid';
+    protected $primaryKey = 'sid';
     protected $table = 'student';
 
     protected $dates = [
@@ -15,6 +15,11 @@ class student extends Model
     ];
 
     protected $fillable = [
+        'studentid',
+        'levelid',
+        'levelname',
+        'syid',
+        'syname',
         'username',
         'avatar',
         'email',

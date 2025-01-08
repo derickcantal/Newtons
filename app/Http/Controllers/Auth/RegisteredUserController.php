@@ -46,7 +46,7 @@ class RegisteredUserController extends Controller
             'firstname' => $request->firstname,
             'middlename' => $request->middlename,
             'lastname' => $request->lastname,
-            'birthday' => $request->birthdate,
+            'birthdate' => $request->birthdate,
             'house' => $request->house,
             'street' => $request->street,
             'brgy' => $request->brgy,

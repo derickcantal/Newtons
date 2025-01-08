@@ -13,13 +13,9 @@ return new class extends Migration
     {
         Schema::create('student_tuition', function (Blueprint $table) {
             $table->increments('stid')->primary();
-            $table->integer('studentid');
-            $table->string('firstname');
-            $table->string('middlename')->nullable();
-            $table->string('lastname');
             $table->integer('syid');
             $table->string('syname');
-            $table->integer('yearlevelid');
+            $table->integer('levelid');
             $table->string('levelname');
             $table->decimal('reg', $precision = 8, $scale = 2);
             $table->decimal('compfee', $precision = 8, $scale = 2);

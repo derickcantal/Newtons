@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('middlename')->nullable();
             $table->string('lastname');
-            $table->string('birthday');
+            $table->string('birthdate');
             $table->string('house')->nullable();
             $table->string('street');
             $table->string('brgy');

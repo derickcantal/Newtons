@@ -8,6 +8,8 @@ use \Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use App\Models\student;
+use App\Models\schoolyear;
+use App\Models\yearlevel;
 
 
 class ManageStudentsController extends Controller
@@ -35,7 +37,12 @@ class ManageStudentsController extends Controller
      */
     public function create()
     {
-        //
+        $yearlevel = yearlevel::orderBy('levelname', 'asc')->get();
+        $schoolyear = schoolyear::orderBy('syname', 'asc')->get();
+        
+        return view('manage.students.create')
+                    ->with(['schoolyear' => $schoolyear])
+                    ->with(['yearlevel' => $yearlevel]);
     }
 
     /**

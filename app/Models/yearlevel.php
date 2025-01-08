@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class yearlevel extends Model
 {
     protected $connection = 'mysql';
-    protected $primaryKey = 'yearlevelid';
+    protected $primaryKey = 'levelid';
     protected $table = 'yearlevel';
 
     protected $dates = [

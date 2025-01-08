@@ -22,6 +22,14 @@ return new class extends Migration
             $table->decimal('totalamount', $precision = 8, $scale = 2);
             $table->string('rdate');
             $table->integer('studentid');
+            $table->string('firstname');
+            $table->string('middlename')->nullable();
+            $table->string('lastname');
+            $table->string('birthday');
+            $table->integer('levelid');
+            $table->string('levelname');
+            $table->integer('syid');
+            $table->string('syname');
             $table->string('status');
             $table->string('notes');
             $table->string('created_by');

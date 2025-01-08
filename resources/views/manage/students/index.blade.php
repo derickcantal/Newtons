@@ -75,16 +75,16 @@
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" class="px-6 py-3">
-                                            No
+                                            No.
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             Profile
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            Branch
+                                            Grade
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            Access Type
+                                            Guardian
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             Status
@@ -106,15 +106,16 @@
                                         <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                             <img class="w-10 h-10 rounded-full" src="{{ asset("/storage/$users->avatar") }}" alt="avatar">
                                             <div class="ps-3">
-                                                
+                                            <x-input-label>Student ID No.: {{ $users->lastname }}</x-input-label>
                                                 <x-input-label>{{ $users->lastname }}, {{ $users->firstname }} {{ $users->middlename }}</x-input-label>
                                                 <x-input-label for="email" :value="$users->email"/>
                                         </th>
                                         <td class="px-6 py-4">
-                                            <x-input-label for="branchname" :value="$users->branchname"/>
+                                            <x-input-label for="levelname" :value="$users->levelname"/>
                                         </td>
                                         <td class="px-6 py-4">
-                                            <x-input-label for="accesstype" :value="$users->accesstype"/>
+                                            <x-input-label for="guardian" :value="$users->guardian"/>
+                                            <x-input-label for="guardian" :value="$users->contact"/>
                                         </td>
                                         <td class="px-6 py-4">
                                             <div class="flex items-center">
