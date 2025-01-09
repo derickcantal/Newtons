@@ -40,7 +40,7 @@ class student extends Model
         'guardian',
         'relationship',
         'contact',
-        'privilege',
+        'accesstype',
         'status',
         'notes',
         'created_by',

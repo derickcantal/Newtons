@@ -132,8 +132,8 @@
                                         </td>
                                         <td class="px-6 py-4">
                                             
-                                            <form action="{{ route('managestudents.destroy',$users->userid) }}" method="POST">
-                                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ route('managestudents.edit',$users->userid) }}">Modify</a>
+                                            <form action="{{ route('managestudents.destroy',$users->sid) }}" method="POST">
+                                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ route('managestudents.edit',$users->sid) }}">Modify</a>
                                                 @csrf
                                                 @method('DELETE')
                                                 @php

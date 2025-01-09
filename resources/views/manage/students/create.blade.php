@@ -45,7 +45,7 @@
                             </div>
                             <!-- Modal body -->
                             <div class="grid gap-4 mb-4 grid-cols-2">
-                            <div class="col-span-2 sm:col-span-1">
+                                <div class="col-span-2 sm:col-span-1">
                                     <!-- school year -->
                                     <div class="form-group mt-4">
                                         <x-input-label for="syid" :value="__('School Year')" />
@@ -161,9 +161,57 @@
                                     </div>
                                 </div>
                                 <div class="col-span-2 sm:col-span-1">
+                                    <!-- fathers name -->
+                                    <div class="form-group mt-4">
+                                        <x-input-label for="fname" :value="__('Fathers Name')" />
+                                        <x-text-input id="fname" class="block mt-1 w-full" type="text" name="fname" :value="old('fname')" required autofocus />
+                                        <x-input-error :messages="$errors->get('fname')" class="mt-2" />
+                                    </div>
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <!-- fathers occupation -->
+                                    <div class="form-group mt-4">
+                                        <x-input-label for="foccupation" :value="__('Fathers Occupation')" />
+                                        <x-text-input id="foccupation" class="block mt-1 w-full" type="text" name="foccupation" :value="old('foccupation')" required autofocus />
+                                        <x-input-error :messages="$errors->get('foccupation')" class="mt-2" />
+                                    </div>
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <!-- mothers name -->
+                                    <div class="form-group mt-4">
+                                        <x-input-label for="mname" :value="__('Mothers Name')" />
+                                        <x-text-input id="mname" class="block mt-1 w-full" type="text" name="mname" :value="old('mname')" required autofocus />
+                                        <x-input-error :messages="$errors->get('mname')" class="mt-2" />
+                                    </div>
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <!-- mothers occupation -->
+                                    <div class="form-group mt-4">
+                                        <x-input-label for="moccupation" :value="__('Mothers Occupation')" />
+                                        <x-text-input id="moccupation" class="block mt-1 w-full" type="text" name="moccupation" :value="old('moccupation')" required autofocus />
+                                        <x-input-error :messages="$errors->get('moccupation')" class="mt-2" />
+                                    </div>
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <!-- guardian -->
+                                    <div class="form-group mt-4">
+                                        <x-input-label for="guardian" :value="__('Guardian')" />
+                                        <x-text-input id="guardian" class="block mt-1 w-full" type="text" name="guardian" :value="old('guardian')" required autofocus />
+                                        <x-input-error :messages="$errors->get('guardian')" class="mt-2" />
+                                    </div>
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <!-- relationship -->
+                                    <div class="form-group mt-4">
+                                        <x-input-label for="relationship" :value="__('Relationship to Guardian')" />
+                                        <x-text-input id="relationship" class="block mt-1 w-full" type="text" name="relationship" :value="old('relationship')" required autofocus />
+                                        <x-input-error :messages="$errors->get('relationship')" class="mt-2" />
+                                    </div>
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
                                     <!-- contact -->
                                     <div class="form-group mt-4">
-                                        <x-input-label for="contact" :value="__('Mobile No.')" />
+                                        <x-input-label for="contact" :value="__('Mobile No. of Guardian')" />
                                         <x-text-input id="contact" class="block mt-1 w-full" type="text" name="contact" :value="old('contact')" required autofocus  />
                                         <x-input-error :messages="$errors->get('contact')" class="mt-2" />
                                     </div>

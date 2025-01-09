@@ -78,13 +78,7 @@
                                             No
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            Profile
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Branch
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Access Type
+                                            School Year
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             Status
@@ -103,18 +97,8 @@
                                         <td class="px-6 py-4">
                                             <x-input-label>{{ ++$i }}</x-input-label>
                                         </td>
-                                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                            <img class="w-10 h-10 rounded-full" src="{{ asset("/storage/$users->avatar") }}" alt="avatar">
-                                            <div class="ps-3">
-                                                
-                                                <x-input-label>{{ $users->lastname }}, {{ $users->firstname }} {{ $users->middlename }}</x-input-label>
-                                                <x-input-label for="email" :value="$users->email"/>
-                                        </th>
                                         <td class="px-6 py-4">
-                                            <x-input-label for="branchname" :value="$users->branchname"/>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <x-input-label for="accesstype" :value="$users->accesstype"/>
+                                            <x-input-label for="syname" :value="$users->syname"/>
                                         </td>
                                         <td class="px-6 py-4">
                                             <div class="flex items-center">
@@ -131,8 +115,8 @@
                                         </td>
                                         <td class="px-6 py-4">
                                             
-                                            <form action="{{ route('managesy.destroy',$users->userid) }}" method="POST">
-                                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ route('managesy.edit',$users->userid) }}">Modify</a>
+                                            <form action="{{ route('managesy.destroy',$users->syid) }}" method="POST">
+                                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ route('managesy.edit',$users->syid) }}">Modify</a>
                                                 @csrf
                                                 @method('DELETE')
                                                 @php
