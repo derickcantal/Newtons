@@ -57,9 +57,9 @@
                                         </div>              
                                         <div class="flex items-center w-full space-x-3 md:w-auto">
                                             <x-primary-button class="ms-4">
-                                                        Search
-                                                    </x-primary-button>
-                                            </div>
+                                                Search
+                                            </x-primary-button>
+                                        </div>
                                         
                                     </div>
                                 </form>
@@ -78,13 +78,7 @@
                                             No
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            Profile
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Branch
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Access Type
+                                            Grade/Level
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             Status
@@ -103,18 +97,8 @@
                                         <td class="px-6 py-4">
                                             <x-input-label>{{ ++$i }}</x-input-label>
                                         </td>
-                                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                            <img class="w-10 h-10 rounded-full" src="{{ asset("/storage/$users->avatar") }}" alt="avatar">
-                                            <div class="ps-3">
-                                                
-                                                <x-input-label>{{ $users->lastname }}, {{ $users->firstname }} {{ $users->middlename }}</x-input-label>
-                                                <x-input-label for="email" :value="$users->email"/>
-                                        </th>
                                         <td class="px-6 py-4">
-                                            <x-input-label for="branchname" :value="$users->branchname"/>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <x-input-label for="accesstype" :value="$users->accesstype"/>
+                                            <x-input-label for="levelname" :value="$users->levelname"/>
                                         </td>
                                         <td class="px-6 py-4">
                                             <div class="flex items-center">
@@ -131,9 +115,10 @@
                                         </td>
                                         <td class="px-6 py-4">
                                             
-                                            <form action="{{ route('manageyl.destroy',$users->userid) }}" method="POST">
-                                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ route('manageyl.edit',$users->userid) }}">Modify</a>
-                                                @csrf
+                                            <form action="{{ route('manageyl.destroy',$users->levelid) }}" method="POST">
+                                            @csrf
+                                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ route('manageyl.edit',$users->levelid) }}">Modify</a>
+                                               
                                                 @method('DELETE')
                                                 @php
                                                 $txtbutton = '';

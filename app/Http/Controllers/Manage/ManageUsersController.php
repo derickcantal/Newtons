@@ -84,7 +84,7 @@ class ManageUsersController extends Controller
             'accesstype' => $request->accesstype,
             'status' => 'Active',
             'notes' => '.',
-            'created_by' => $request->email,
+            'created_by' => auth()->user()->email,
             'updated_by' => '.',
             'timerecorded' => $timenow,
             'posted' => 'N',

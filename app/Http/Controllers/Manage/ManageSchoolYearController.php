@@ -35,7 +35,7 @@ class ManageSchoolYearController extends Controller
      */
     public function create()
     {
-        //
+        return view('manage.schoolyear.create');
     }
 
     /**
@@ -43,7 +43,27 @@ class ManageSchoolYearController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $timenow = Carbon::now()->timezone('Asia/Manila')->format('Y-m-d H:i:s');
+        $schoolyear = $request->schoolyearstart . '-' . $request->schoolyearend;
+
+        $user = schoolyear::create([
+            'syname' => $schoolyear,
+            'status' => 'Active',
+            'notes' => '.',
+            'created_by' => auth()->user()->email,
+            'updated_by' => '.',
+            'timerecorded' => $timenow,
+            'posted' => 'N',
+            'mod' => 0,
+            'copied' => 'N',
+        ]);
+        if($user){
+            return redirect()->route('managesy.index')
+                        ->with('success','School Year created successfully.');
+        }else{
+            return redirect()->route('managesy.index')
+                        ->with('failed','School Year creation failed.');
+        }
     }
 
     /**

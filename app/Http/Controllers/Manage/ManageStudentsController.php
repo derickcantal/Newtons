@@ -83,7 +83,7 @@ class ManageStudentsController extends Controller
             'accesstype' => 'Student',
             'status' => 'Active',
             'notes' => '.',
-            'created_by' => $request->email,
+            'created_by' => auth()->user()->email,
             'updated_by' => '.',
             'timerecorded' => $timenow,
             'posted' => 'N',
